@@ -21,6 +21,10 @@ class CustomerDashboard < Administrate::BaseDashboard
     :kind,
   ].freeze
 
+  def resource_class
+    Customer.unscoped
+  end
+
   def display_resource(customer)
     customer.name
   end

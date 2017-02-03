@@ -4,6 +4,8 @@ class Customer < ActiveRecord::Base
   validates :name, presence: true
   validates :email, presence: true
 
+  default_scope -> { where(kind: "vip") }
+
   KINDS = [
     :standard,
     :vip,

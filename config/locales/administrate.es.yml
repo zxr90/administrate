@@ -6,8 +6,8 @@ es:
       destroy: Destruir
       edit: Editar
       show: Mostrar
-      new: Novaj
-      back: Reen
+      new: Nuevo
+      back: Atrás
     controller:
       create:
         success: "%{resource} fue creado exitosamente."

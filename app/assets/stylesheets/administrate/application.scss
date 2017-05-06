@@ -28,3 +28,16 @@
 @import "components/search";
 
 @import "utilities/text-color";
+
+.test {
+  @include hide-visually();
+
+  &:focus {
+    @include hide-visually("unhide");
+    @include position(absolute, 0 null null 0);
+    font-size: 0.8em;
+    padding: 0.5em;
+    white-space: nowrap;
+    z-index: 1;
+  }
+}

@@ -56,35 +56,35 @@ to display a collection of resources in an HTML table.
   <tbody>
     <% resources.each do |resource| %>
       <tr class="js-table-row"
-          tabindex="0"
-          <%= %(role=link data-url=#{polymorphic_path([namespace, resource])}) if valid_action? :show -%>
-          >
+        <%= %(data-url=#{polymorphic_path([namespace, resource])}) if valid_action? :show -%>
+      >
         <% collection_presenter.attributes_for(resource).each do |attribute| %>
           <td class="cell-data cell-data--<%= attribute.html_class %>">
-            <a href="<%= polymorphic_path([namespace, resource]) -%>"
-               class="action-show"
-               >
-              <%= render_field attribute %>
-            </a>
+            <a href="<%= polymorphic_path([namespace, resource]) -%>" class="test button">View Order 1</a>
+            <%= render_field attribute %>
           </td>
         <% end %>
 
         <% if valid_action? :edit %>
-          <td><%= link_to(
-            t("administrate.actions.edit"),
-            [:edit, namespace, resource],
-            class: "action-edit",
-          ) %></td>
+          <td>
+            <%= link_to(
+              t("administrate.actions.edit"),
+              [:edit, namespace, resource],
+              class: "action-edit",
+            ) %>
+          </td>
         <% end %>
 
         <% if valid_action? :destroy %>
-          <td><%= link_to(
-            t("administrate.actions.destroy"),
-            [namespace, resource],
-            class: "text-color-red",
-            method: :delete,
-            data: { confirm: t("administrate.actions.confirm") }
-          ) %></td>
+          <td>
+            <%= link_to(
+              t("administrate.actions.destroy"),
+              [namespace, resource],
+              class: "text-color-red",
+              method: :delete,
+              data: { confirm: t("administrate.actions.confirm") }
+            ) %>
+          </td>
         <% end %>
       </tr>
     <% end %>

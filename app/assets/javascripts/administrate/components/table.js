@@ -1,10 +1,6 @@
 $(function() {
-  var keycodes = { space: 32, enter: 13 };
-
   var visitDataUrl = function(event) {
-    if (event.type == "click" ||
-        event.keyCode == keycodes.space ||
-        event.keyCode == keycodes.enter) {
+    if (event.type == "click") {
 
       if (event.target.href) {
         return;
@@ -19,5 +15,4 @@ $(function() {
   };
 
   $("table").on("click", ".js-table-row", visitDataUrl);
-  $("table").on("keydown", ".js-table-row", visitDataUrl);
 });

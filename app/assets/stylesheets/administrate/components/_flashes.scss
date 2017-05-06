@@ -1,28 +1,20 @@
-$base-spacing: 1.5em !default;
-$flashes: (
-  "alert": #fff6bf,
-  "error": #fbe3e4,
-  "notice": #e5edf8,
-  "success": #e6efc2,
-) !default;
+$_flash-colors: (
+  "alert": $yellow-50,
+  "error": $red-50,
+  "notice": $blue-50,
+  "success": $green-50,
+);
 
-@each $flash-type, $color in $flashes {
-  .flash-#{$flash-type} {
+.flash {
+  margin: 0 2rem 0.25rem;
+  padding: 0.5rem;
+}
+
+@each $flash-type, $color in $_flash-colors {
+  .flash--#{$flash-type} {
     background-color: $color;
-    color: mix($black, $color, 60%);
-    display: block;
-    margin-bottom: $base-spacing / 2;
-    padding: $base-spacing / 2;
-    text-align: center;
-
-    a {
-      color: mix($black, $color, 70%);
-      text-decoration: underline;
-
-      &:focus,
-      &:hover {
-        color: mix($black, $color, 90%);
-      }
-    }
+    border: 1px solid saturate(mix($black, $color, 20%), 30%);
+    border-radius: $base-border-radius;
+    color: $base-font-color;
   }
 }

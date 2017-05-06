@@ -55,7 +55,7 @@ describe "customer edit page" do
     click_on "Update Customer"
 
     expect(page).to have_css(
-      "#error_explanation ul li.flash-error",
+      "#error_explanation ul li.flash--error",
       text: "Name can't be blank",
     )
   end

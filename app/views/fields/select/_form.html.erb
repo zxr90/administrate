@@ -15,10 +15,10 @@ to be displayed on a resource's edit form page.
 [1]: http://www.rubydoc.info/gems/administrate/Administrate/Field/Select
 %>
 
-<div class="field-unit__label">
+<div class="form__field-label">
   <%= f.label field.attribute %>
 </div>
-<div class="field-unit__field">
+<div class="form__field-input">
   <%= f.select(
     field.attribute,
     options_from_collection_for_select(

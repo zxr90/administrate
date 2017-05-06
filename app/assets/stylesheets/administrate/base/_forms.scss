@@ -48,10 +48,10 @@ textarea {
 input:not([type]),
 textarea {
   appearance: none;
-  background-color: $white;
+  background-color: shade($white, 2%);
   border: $base-border;
   border-radius: $base-border-radius;
-  padding: $base-spacing / 3;
+  padding: 0.5em;
   transition: border-color $base-duration $base-timing;
   width: 100%;
 

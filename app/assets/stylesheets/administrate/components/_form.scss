@@ -1,0 +1,25 @@
+.form {
+  padding: $base-spacing;
+
+  @media (min-width: $large-screen) {
+    width: 50%;
+  }
+}
+
+.form__field-unit {
+  margin-bottom: 2rem;
+}
+
+.form__field-label {
+  font-size: 0.9em;
+  margin-bottom: 0.25rem;
+}
+
+.form__field-input {
+  position: relative;
+}
+
+.form__actions {
+  border-top: $base-border;
+  padding-top: $base-spacing;
+}

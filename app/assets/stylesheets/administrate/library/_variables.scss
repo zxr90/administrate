@@ -54,9 +54,12 @@ $flash-colors: (
 );
 
 // Border
-$base-border-color: $grey-1;
+$base-border-color: #aaa;
 $base-border: 1px solid $base-border-color;
 
 // Transitions
 $base-duration: 250ms;
 $base-timing: ease-in-out;
+
+// Breakpoints
+$large-screen: 64em;

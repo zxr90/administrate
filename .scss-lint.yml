@@ -1,4 +1,6 @@
-scss_files: "app/assets/stylesheets/administrate/**/*.scss"
+scss_files:
+  - "app/assets/stylesheets/administrate/**/*.scss"
+  - "app/assets/stylesheets/docs.scss"
 
 severity: warning
 

@@ -27,3 +27,5 @@ en:
       customer:
         country_code:
           country: Country
+      product:
+        product_meta_tag: Meta tag

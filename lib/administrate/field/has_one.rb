@@ -10,6 +10,14 @@ module Administrate
         )
       end
 
+      def title
+        I18n.t(
+          "#{resource.model_name.param_key}.#{attribute}",
+          scope: "helpers.label",
+          default: nested_form.resource_name.titleize
+        )
+      end
+
       def self.permitted_attribute(attr, options = nil)
         associated_class_name =
           if options

@@ -24,3 +24,6 @@ en:
       order:
         line_item_ids:
           line_items: Order items
+      customer:
+        country_code:
+          country: Country

@@ -17,3 +17,10 @@ en:
 
   titles:
     application: Administrate-prototype
+
+en:
+  helpers:
+    label:
+      order:
+        line_item_ids:
+          line_items: Order items
